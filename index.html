@@ -4,23 +4,55 @@
         background: rgb(34,193,195);
         background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(254,138,235,0.4374124649859944) 100%);
     }
+    #nav-logo {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 2%;
+        width: 10%;
+        padding: 0.5%;
+    }
+    nav {
+        background-color: white; 
+        position: fixed; 
+        top:0;
+        right:0;
+        left: 0;
+    }
+    nav ul.nav-menu {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    nav ul.nav-menu li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1rem;
+    }
+    nav ul.nav-menu li.active {
+        font-weight: bold;
+    }
     img {
         border-radius: 10px;
         max-width: 100%;
     }
     .flex-container {
         display: flex;
-        align-items: left;
+        align-items: center;
         text-align: left;
-        margin: 3%;
-        border: 3px;
-        border-radius: 5px;
+    }
+    .column {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    section {
+        margin:3%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 10px;
         border-color:palevioletred;
         background-color: white;
     }
-    .column {
-        padding: 2%;
-    }
+
 </style>
 <head>
     <meta charset="UTF-8" />
@@ -29,48 +61,78 @@
 </head>
 
 <body>
-    <div class="flex-container" id="intro">
-        <div class="column" style="flex:30%;"> 
-            <img src="Katie Prescott profile pic.jpg" alt="profile picture">
-        </div>
-        <div class="column" style="flex: 70%">
-            <h1> Introduction </h1>
-            <p>Hi everyone! My name is Katie, I am a teacher and social entrepreneur from the UK. I am so excited to join this course to learn more about web development. I have already built a few simple websites using WordPress, including:
-                <ul>
-                    <li> <a href="https://abridgeacademy.com">Abridge Academy</a> - offering online courses for my social enterprise </li>
-                    <li> <a href="https://abridgeeducamp.com">Abridge EduCamp</a> - a TEFL summer camp application platform </li>
-                    <li> <a href="https://stemboost.co.uk">STEM Boost</a> - a membership site for science teachers and parents </li>
-                    <li> <a href="https://travelboost.co.uk">Travel Boost</a> - a travel blog I've mostly forgotten about... </li>
-                </ul>
-            </p>
-        </div>
-    </div>
-    <div class="flex-container">
-        <div class="column">
-            <h2> My goals </h2>
-            <p>I hope to improve my web development skills in order to work on a variety of EdTech projects, helping to open up STEM and language learning to students from around the world. I would love to learn how to build websites from scratch to bring these ideas to reality. 
-            </p>
-        </div>
-    </div>
-    </div>
-
-    <div class="flex-container" id="footer">
-        <div class="column" style="flex: 50%;">
-            <h2> Let's connect! </h2>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/kate-prescott-885a1387">LinkedIn</a></li>
-                    <li><a href="https://www.facebook.com/katie.prescott.999/">Facebook</a></li>
-                </ul>
-        </div>
-        <div class="column" style="flex: 50%;">
-            <h2>Sign up to the email list!</h2>
-            <form>
-                <input type="email" placeholder="your email">
-                <br>
-                <input type="checkbox" value="I agree to receive the monthly newsletter">
-                <br>
-                <input type="button" value="submit">
-            </form>
-        </div>
-    </div>
+    <nav>
+       <img id="nav-logo" src="Abridge Academy Logo Simple with Text.png" alt="Abridge Academy logo">
+       <ul class="nav-menu">
+           <li class="active">Home</li>
+           <li>About</li>
+           <li>Blog</li>
+           <li>Contact</li>
+       </ul>
+    </nav>
+    <main>
+        <section class="flex-container" id="intro" style="margin-top: 10%;">
+            <div class="column" style="flex:30%"> 
+                <img src="Katie Prescott profile pic.jpg" alt="profile picture">
+            </div>
+            <div class="column" style="flex:70%">
+                <h1> Introduction </h1>
+                <p>Hi everyone! My name is Katie, I am a teacher and social entrepreneur from the UK. I am so excited to join this course to learn more about web development. I have already built a few simple websites using WordPress, including:
+                    <ul>
+                        <li> <a href="https://abridgeacademy.com">Abridge Academy</a> - offering online courses for my social enterprise </li>
+                        <li> <a href="https://abridgeeducamp.com">Abridge EduCamp</a> - a TEFL summer camp application platform </li>
+                        <li> <a href="https://stemboost.co.uk">STEM Boost</a> - a membership site for science teachers and parents </li>
+                        <li> <a href="https://travelboost.co.uk">Travel Boost</a> - a travel blog I've mostly forgotten about... </li>
+                    </ul>
+                    I hope to improve my web development skills in order to work on a variety of EdTech projects, helping to open up STEM and language learning to students from around the world. I would love to learn how to build websites from scratch to bring these ideas to reality.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="column">
+                <h2> My skills </h2>
+            </div>
+            <div class="flex-container">
+                <div class="column">
+                    <h3>Design</h3>
+                    <p>
+                        I have been designing websites using WordPress since 2013, focusing on eye-catching design with clear call-to-action buttons to increase conversion rates.
+                    </p>
+                </div>
+                <div class="column">
+                    <h3>SEO</h3>
+                    <p>
+                        To help websites get discovered on Google, I make use of Search Engine Optimisation (SEO) tools and build organic backlinks. 
+                    </p>
+                </div>
+                <div class="column">
+                    <h3>Plugins</h3>
+                    <p>
+                        I have a strong understanding of WordPress plugins to add extra functionality to websites, focusing on membership, online course and e-commerce sites.
+                    </p>
+                </div>
+            </div>
+            
+        </section>
+    
+        <section class="flex-container" id="footer">
+            <div class="column" style="flex: 50%;">
+                <h2> Let's connect! </h2>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/kate-prescott-885a1387">LinkedIn</a></li>
+                        <li><a href="https://www.facebook.com/katie.prescott.999/">Facebook</a></li>
+                    </ul>
+            </div>
+            <div class="column" style="flex: 50%;">
+                <h2>Sign up to the email list!</h2>
+                <form>
+                    <input type="email" placeholder="your email">
+                    <br>
+                    <input type="checkbox" value="I agree to receive the monthly newsletter">
+                    <br>
+                    <input type="button" value="submit">
+                </form>
+            </div>
+        </section>
+    </main>
 </body>
